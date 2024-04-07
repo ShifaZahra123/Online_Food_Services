@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Conatact_form.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <!--########### NavBar Code ###############-->
+   <nav>
+    <ul class ="topnav" id="dropdownclick">
+        <li><a href = "index.html">Home</a></li>
+        <li><a href = "#">News</a></li>
+        <li><a href = "Message_Form.html">Message</a></li>
+        <li><a href = "#">About</a></li>
+        <li class="topnav-right"><a href = "Sign_up.html">Sign Up</a></li>
+        <li class="topnav-right"><a href = "Log_in.html">Log In</a></li>
+      </ul>
+   </nav>
+   
+   <!-- ########### Form Code ###############-->
+    <form action="Home.html" method="GET">
+
+            <div class="heading">
+                <h1>Contact Form</h1>
+                <p class="sub-heading">*Please fill all the text in the fields</p>
+            </div>
+
+            <div class="container">
+                <p>Your Name :</p>
+                <input type="text" name="name" required placeholder="Your Full Name">
+            
+                <p>Your Email :</p>
+                <input type="email" name="email" required placeholder="Valid Email Address">
+            
+                <p>Message :</p>
+                <textarea name="msg" id="msg" cols="100" rows="5" required placeholder="Your Message to Us"></textarea>
+            
+                <p>Subject :</p>
+                    <select name="subject_name" id="subject_name" required>
+                        <option value="">--Select a Subject--</option> 
+                        <option value="job">Job Enquiry</option> 
+                        <option value="payment">Payment Related</option>
+                        <option value="guidance">Guidance</option>
+                        <option value="other">Other</option>
+                     </select>
+                 </p>
+
+            <input type="submit" value="Send">
+
+        </div>
+    </form>
+    <!-- ### Code End ###-->
+</body>
+</html>

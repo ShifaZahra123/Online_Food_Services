@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 30px;
+    font-style: 17px;
+    padding: 8px;
+}
+/* ######### Contact Form Code ###########*/
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 2px solid lightgray;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.heading{
+    background-color: yellowgreen;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 6px;
+}
+
+h1, .sub-heading{
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 1px;
+    font-size: 1.1rem;
+}
+
+input[type="submit"]{
+    color: white;
+    width: 25%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color:rgb(143, 190, 49);
+}
+
+/* ############ NavBar Code #############*/
+nav{
+    width: 100%;
+    margin: 0;
+}
+
+nav ul{
+    background-color: #eee;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+ul.topnav li{
+    list-style: none;
+    float: left;  
+}
+
+ul.topnav li.topnav-right{
+    float: right;
+}
+
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+ul.topnav li a:hover{
+    background-color: #0080ff;
+    color: #fff;  
+}

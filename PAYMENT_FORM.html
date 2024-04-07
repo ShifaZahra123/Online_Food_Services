@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<title>Payment Form</title>
+</head>
+<style>
+    *{
+    box-sizing: border-box;
+}
+hr{
+    margin:0px;
+    padding:0px;
+}
+body{
+    font-family: 'Lobster';
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 8px;
+}
+.container{
+    background-color: rgb(253, 224, 239);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightpink;
+    border-radius: 4px;
+}
+h3{
+    padding: 0px;
+    margin-bottom: 5px;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Times New Roman', Times, serif;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid darkred;
+      border-radius: 5px;
+      margin: 10px;
+      font-family: sans-serif;
+      font-size: 1.1rem;
+}
+input[type="number"].zip_code ,.State{
+    width: 100%;
+}
+input[type="radio"]{
+      font-size: large;
+}
+fieldset{
+    border: 1px solid darkred; 
+    background-color: rgb(253, 224, 239);
+}
+.Mainheading{
+    text-align: center;
+}
+input[type="submit"],input[type="reset"]{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 10%;
+    height: 20%;
+    font-size: 18px;
+}
+input[type="submit"]{
+    margin-left: 500;}
+input[type="submit"]:hover{
+    text-decoration: underline;
+}
+input[type="reset"]:hover{
+    text-decoration: underline;
+}
+#resume{
+    color: tomato;
+}
+</style>
+<body>
+    <div class="container" >
+    <form action="index.html" method="GET">
+        <hr>
+        <br>
+        <h1 class="Mainheading">Payment Form</h1>
+        <br>
+        <hr>
+        <h5>(*) Fields are mandatory</h5>   
+        <h2>Billing Address</h2>
+        <p>Name: * <input type="text" name="name" placeholder="Enter your full name" id="name" required></p>
+        <fieldset>
+            <legend>Gender</legend>
+            <p> <input type="radio" name="gender" id="male" required> Male <input type="radio" name="gender" id="female" required> Female
+                 <input type="radio" name="gender" id="other" required> Other </p>
+        </fieldset>
+        <p>Email: * <input type="email" name="email" placeholder="abc@xyz.com" id="email" required></p>
+        <p>Address: <textarea name="address" placeholder="Enter your address eg: DHA/Defence Lahore etc" id="address" cols="100" rows="8"></textarea></p>
+        <p>City: * 
+            <select name="city" id="city" class="form-control" required> 
+                <option value="">--Select a City--</option>
+                <option value="Lahore">LAHORE</option>
+                <option value="Peshawar">PESHAWAR</option>
+                <option value="Karachi">KARACHI</option>
+                <option value="Islamabad">ISLAMABAD</option>
+                <option value="Faisalabad">FAISALABAD</option>
+                </select></p>
+        <p>State: * 
+            <select name="city" id="State" class="form-control" required> 
+                    <option value="">Choose State</option>
+                    <option value="Punjab">PUNJAB</option>
+                    <option value="Sindh">SINDH</option>
+                    <option value="Balochistan">BALOCHISTAN</option>
+                    <option value="Khyber Pakhtunkhwa">K.P.K</option>
+                    <option value="Islamabad">ISLAMABAD</option>
+                    <option value="Gilgit–Baltistan">GILGIT-BALTISTAN</option>
+                    </select></p>
+        <p>Zip Code: <input type="number" name="zip_code" placeholder="If you do not know the Zip Code, please enter 54000" id="zip_code"></p> 
+        <p>Pincode: * <input type="password" placeholder="Ali123... etc" required></p>
+        <p>Upload your CV here  <input type="file"  id="resume" name="resume" value="File"></p>
+        <h2>Payment Information</h2>
+        <h3>Accepted Cards</h3><img class="visa" src="img/visa.png" height="30" width="50" alt="visa" class="visa">
+        <img class="mastercard" src="img/mastercard.webp" height="32" width="50" alt="mastercard" class="visa">
+        <img class="rupay" src="img/Rupay.png" height="25" width="50" alt="visa" class="visa">
+        <img class="discover" src="img/discove-logo.png" height="32" width="50" alt="Discover" class="visa">
+        <p>Card Type: *
+            <select name="card_type" id="card_type" class="form-control" required> 
+            <option value="">--Select a Card Type--</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="discover">Discover</option>
+            <option value="Americanexpress">American Express</option>
+            </select>
+        </p>
+        <p>Credit Card Number: * <input type="number" name="card_number" placeholder="111-222-333...etc" id="card_number" required></p>
+        <p>Expiration Month: *<input type="text" name="expiry_month" id="expiry_month" placeholder="Enter Month" required></p>
+        <p>Expiration Date: *<input type="date" name="expiry_date" id="expiry_date" required></p>
+        <p>CVV: *<input type="password" name="cvv" placeholder="12345678..." id="cvv" required></p>
+        <br><br><br><br><br>
+<input type="checkbox">Our website wants to send you notifications</input> <br><br>
+<input type="reset" name="reset" value="Reset"> 
+<input type="submit" name="submit" value="Pay Now">   
+    </div>
+    </form>
+</body>
+</html>
